@@ -1,0 +1,25 @@
+.clients {
+  @extend %flex;
+  gap: 30px;
+  .clients__item {
+    width: calc((100% - 150px) / 6);
+    height: 92px;
+  }
+
+  .clients__link {
+    @extend %flex;
+    width: 100%;
+    height: 100%;
+    fill: var(--primary-svg-color);
+    border: 1px solid var(--primary-svg-color);
+    border-radius: 4px;
+    transition-property: fill, background-color, border;
+    @extend %transition;
+    &:hover,
+    &:focus {
+      fill: var(--focus-color);
+      border: 1px solid var(--focus-color);
+      border-radius: 4px;
+    }
+  }
+}

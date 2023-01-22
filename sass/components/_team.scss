@@ -1,0 +1,51 @@
+.team {
+  display: flex;
+  flex-basis: calc((100% - 90px) / 4);
+  gap: 30px;
+}
+.team__item {
+  background-color: var(--primary-white-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+.team__content {
+  padding: 30px 0;
+  text-align: center;
+}
+.team__title {
+  margin-bottom: 10px;
+  color: var(--title-text-color);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-text-secondary);
+  line-height: 1.18;
+  letter-spacing: 0.03em;
+}
+.team__text {
+  font-size: var(--font-size-text-secondary);
+  line-height: 1.18;
+  letter-spacing: 0.03em;
+}
+.socials {
+  @extend %flex;
+  gap: 10px;
+  margin-top: 16px;
+}
+.socials__item {
+  width: 44px;
+  height: 44px;
+}
+.socials__link {
+  @extend %flex;
+  width: 100%;
+  height: 100%;
+  fill: var(--primary-svg-color);
+  border-radius: 50%;
+  transition-property: fill, background-color;
+  @extend %transition;
+  &:hover,
+  &:focus {
+    fill: var(--primary-white-color);
+    background-color: var(--focus-color);
+  }
+}
